@@ -1,62 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link href="./output.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | News homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+    <title>Frontend Mentor | News homepage</title>
 
-  The Bright Future of Web 3.0?
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+  <!-- 
+  TO DO: Add responsiveness
+  -->
+  <body class="font-Inter p-4">
 
-  Read more
+    <header class="relative mb-4 md:mb-8">
+      <!-- navigation -->
+      <nav class="flex justify-between items-center">
+        <!-- logo -->
+         <img src="./assets/images/logo.svg" alt="logo" class="inline-block">
 
-  New 
+         <!-- menu button -->
+         <button id="menu-btn" class="hover:cursor-pointer md:hidden"><img src="./assets/images/icon-menu.svg" alt="menu-btn"></button>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
+         <!--close menu and  nav links -->
+        <div id="menu-links" class="absolute md:relative top-0 right-0 w-[50vw] md:w-fit  h-[60vh] md:h-fit bg-white md:bg-none border md:border-none border-Dark-grayish-blue  px-4 pt-[4.5rem] md:pt-4 hidden md:block md:flex">
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
+          <button id="close-menu" class="md:hidden absolute top-2 right-4"><img src="./assets/images/icon-menu-close.svg" alt="close-menu-btn"></button>
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+          <ul class="md:flex space-y-8 md:gap-7 text-Dark-grayish-blue ">          
+            <li class="hover:text-Very-dark-blue text-[20px]"><a href="#">Home</a></li>
+            <li class="hover:text-Very-dark-blue text-[20px]"><a href="#">New</a></li>
+            <li class="hover:text-Very-dark-blue text-[20px]"><a href="#">Popular</a></li>
+            <li class="hover:text-Very-dark-blue text-[20px]"><a href="#">Trending</a></li>
+            <li class="hover:text-Very-dark-blue text-[20px]"><a href="#">Categories</a></li>
+         </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- header contetn -->
+    <section id="Home" class="grid md:grid-cols-3 gap-4">
 
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
+      <main class="md:col-span-2 grid md:grid-cols-2 gap-4">
+        <!-- header img -->
+      <div class="md:col-span-2">
+        <img src="./assets/images/image-web-3-mobile.jpg" alt="" class="md:hidden">
+        <img src="./assets/images/image-web-3-desktop.jpg" alt="" class="hidden md:block">
+      </div>
 
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
+      <div class="py-4">
+        <h1 class="text-[3.3rem] md:text-6xl font-bold leading-12 text-Very-dark-blue w-[80%] md:w-[75%]">The Bright Future of Web 3.0?</h1>
+      </div>
 
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div>
+        <p class="text-Dark-grayish-blue font-medium">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+        </p>
+
+        <button class="bg-Soft-red my-4 inline-block w-[40%] py-2.5 font-bold tracking-widest"><a href="#">Read more</a></button>
+      </div>
+
+      </main>
+
+      <div class="bg-Very-dark-blue text-Off-white p-4 min-h-fit">
+        <h2 class="text-Soft-orange text-4xl font-bold mb-4">New</h2>
+        <!-- hydrogen -->
+        <div class="mb-6">
+          <h3 class="text-3xl font-bold text-Off-white mb-3.5">Hydrogen VS Electric Cars</h3>
+          <p class="font-light text-Grayish-blue">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+
+        <div class="pt-[0.5px] bg-Grayish-blue"></div>
+
+        <div class="my-6">
+          <h3 class="text-3xl font-bold text-Off-white mb-3.5">The Downsides of AI Artistry</h3>
+          <p class="font-light text-Grayish-blue">What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+
+        <div class="pt-[0.5px] bg-Grayish-blue"></div>
+
+
+        <div class="my-6">
+          <h3 class="text-3xl font-bold text-Off-white mb-3.5">Is VC Funding Drying Up?</h3>
+          <p class="font-light text-Grayish-blue">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="flex flex-col md:flex-row my-9 gap-6">
+      
+      <div class="flex gap-4">
+
+        <img src="./assets/images/image-retro-pcs.jpg" alt="" class="inline-block">
+
+        <div class="py-4 flex flex-col justify-around">
+          <h2 class="text-Soft-red text-6xl font-bold">01</h2>
+          <h3 class="text-Very-dark-blue text-2xl font-bold">Reviving Retro PCs</h3>
+          <p class="text-Dark-grayish-blue sm:text-lg text-xl font-medium leading-8">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+
+      </div>
+
+        <div class="flex gap-4">
+
+        <img src="./assets/images/image-top-laptops.jpg" alt="" class="inline-block">
+
+        <div class="py-4 flex flex-col justify-around">
+          <h2 class="text-Soft-red text-6xl font-bold">02</h2>
+          <h3 class="text-Very-dark-blue text-2xl font-bold">Top 10 Laptops of 2022</h3>
+          <p class="text-Dark-grayish-blue sm:text-lg text-xl font-medium leading-8">
+            Our best picks for various needs and budgets. 
+          </p>
+        </div>
+
+      </div>
+
+        <div class="flex gap-4">
+
+        <img src="./assets/images/image-gaming-growth.jpg" alt="" class="inline-block">
+
+        <div class="py-4 flex flex-col justify-around">
+          <h2 class="text-Soft-red text-6xl font-bold">03</h2>
+          <h3 class="text-Very-dark-blue text-2xl font-bold">The Growth of Gaming</h3>
+          <p class="text-Dark-grayish-blue sm:text-lg text-xl font-medium leading-8">
+           How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+
+      </div>
+    
+    </section>
+           
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+
+    <script src="index.js"></script>
+  </body>
 </html>
